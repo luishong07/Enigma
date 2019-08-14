@@ -1,0 +1,16 @@
+.board{
+    box-align: center;
+    margin: 20px auto;
+    margin-left:550px;
+    padding:40px
+
+
+}
+
+.plugpair{
+    float:left;
+    padding-left: 10px;
+    text-align: center
+
+}
+

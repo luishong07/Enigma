@@ -39,9 +39,6 @@
 		
 		22,
 		1
-		
-		
-		
 	]
 
 	let rotorII = [
@@ -112,7 +109,6 @@
 
 			16,
 			14
-		
 	]
 	
 	let reflector = [
@@ -165,7 +161,7 @@ let reverseIII = [
             16,//8
             4,
             20,
-            5,--//11
+            5,//11
 
 			21,
             13,
@@ -255,11 +251,18 @@ let reverseIV = [
 
             8,
             5
-
 ]
 
 	
 // }
 
+export {rotorII}
+export {rotorIII}
+export {rotorIV}
 
+export {reflector}
+
+export {reverseIV}
+export {reverseIII}
+export {reverseII}
 // let reverseRotor1 = rotor1.map( number => rotor1.indexOf(number) )
