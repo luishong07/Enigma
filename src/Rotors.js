@@ -4,41 +4,39 @@
 
 	// letters[reverseOfRotor1[reverseOfRotor2[reverseOfRotor3[rotor3[rotor2[rotor1[letters.indexOf(e.key)]]]]]]]
 
-	let rotorIV= [
-        4,
-	    18,
-	    14,
-
-		21,
-		15,
-		25,
-		
-		9,
-		0,
-		24,
-
-		16,
-		20,
-		8,
-
-		17,
-		7,
-		23,
+	let rotorI =[
+		4,
+		10,
+		12,
+		5,//3
 
 		11,
-		13,
-		5,
-
-		19,
 		6,
-		10,
-
 		3,
-		2,
-		12,
-		
+		16,//7
+
+		21,
+		25,
+		13,
+		19,//11
+
+		14,
 		22,
-		1
+		24,
+		7,//15
+
+		23,
+		20,
+		18,
+		15,//19
+
+		0,
+		8,
+		1,
+		17,//23
+
+		2,
+		9
 	]
 
 	let rotorII = [
@@ -111,6 +109,78 @@
 			14
 	]
 	
+	let rotorIV= [
+        4,
+	    18,
+	    14,
+
+		21,
+		15,
+		25,
+		
+		9,
+		0,
+		24,
+
+		16,
+		20,
+		8,//11
+
+		17,
+		7,
+		23,//14
+
+		11,
+		13,
+		5,//17
+
+		19,
+		6,
+		10,
+
+		3,
+		2,
+		12,
+		
+		22,
+		1
+	]
+
+	let rotorV = [
+		21,
+		25,
+		1,
+		17,//3
+
+		6,
+		8,
+		19,
+		24,//7
+
+		20,
+		15,
+		18,
+		3,//11
+
+		13,
+		7,
+		11,
+		23,//15
+
+		0,
+		22,
+		12,
+		9,//19
+
+		16,
+		14,
+		5,
+		4,//23
+
+		2,
+		10
+	]
+
 	let reflector = [
 			24,
 			17,
@@ -147,7 +217,46 @@
 			
 ]
 
-let reverseIII = [
+	let reverseV =[
+		
+	]
+
+	let reverseIV = [
+	7,
+	25,
+	22,
+	21,
+
+	0,
+	17,
+	19,//6
+	13,
+
+	11,
+	6,
+	20,
+	15,//11
+
+	23,//12
+	16,
+	2,
+	4,
+
+	9,//16
+	12,
+	1,
+	18,//19
+
+	10,
+	3,
+	24,
+	14,
+
+	8,
+	5
+]
+
+	let reverseIII = [
 			19,
             0,
 			6,//2
@@ -183,7 +292,7 @@ let reverseIII = [
 
 ]
 
-let reverseII = [
+	let reverseII = [
 			0,
 			9,
 			15,
@@ -218,44 +327,47 @@ let reverseII = [
             18
 ] 
 
-let reverseIV = [
-			7,
-			25,
-			22,
-			21,
+	let reverseI = [
+		20,
+		22,
+		24,
+		6,//3
 
-			0,
-			17,
-			19,//6
-			13,
+		0,
+		3,
+		5,
+		15,//7
 
-			11,
-			6,
-			20,
-			15,//11
+		21,
+		25,
+		1,
+		4,//11
 
-			23,//12
-			16,
-			2,
-			4,
+		2,
+		10,
+		12,
+		19,//15
 
-			9,//16
-			12,
-			1,
-			18,//19
+		7,
+		23,
+		18,
+		11,//19
 
-            10,
-            3,
-            24,
-            14,
+		17,
+		8,
+		13,
+		16,//23
 
-            8,
-            5
-]
+		14,
+		9
+	]
 
+	const testR={
+		"I":[1,2,3,4,5]
+	}
 	
 // }
-
+export {rotorI}
 export {rotorII}
 export {rotorIII}
 export {rotorIV}
@@ -265,4 +377,6 @@ export {reflector}
 export {reverseIV}
 export {reverseIII}
 export {reverseII}
+export {reverseI}
+export {testR}
 // let reverseRotor1 = rotor1.map( number => rotor1.indexOf(number) )

@@ -1,8 +1,9 @@
 .board{
     box-align: center;
     margin: 20px auto;
-    margin-left:550px;
-    padding:40px
+    /* margin-left:550px; */
+    padding:40px;
+    display: inline-block
 
 
 }

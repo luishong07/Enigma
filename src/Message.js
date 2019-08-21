@@ -8,7 +8,7 @@ class Message extends Component{
         return(
             <div>
 
-
+                TEST
             </div>
         )
     }
