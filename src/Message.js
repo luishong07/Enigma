@@ -1,16 +1,30 @@
 import React, { Component } from 'react'
 
-class Message extends Component{
-    
+const Message =(props)=>{
+    // style={
+    //     "text-align":"center"
+    // }
 
 
-    render(){
+   
+        if(!props.m){
+            return null
+        }
+        // console.log(props.m,"heck")
+        
         return(
-            <div>
+            
+                <tr>
+                    <td >{props.m.user.username}</td>
+                    <td >{props.m.message.plain}</td>
+                    <td >{props.m.message.cipher}</td>
+                    
 
-                TEST
-            </div>
+                </tr>
+
+               
+           
         )
-    }
+    
 }
 export default Message

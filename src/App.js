@@ -6,17 +6,18 @@ import LampBoard from './LampBoard'
 import PlugBoard from './PlugBoard'
 import SettingsBoard from './SettingsBoard'
 import OutputBoard from './OutputBoard'
-import {rotorI} from './Rotors'
+// import {rotorI} from './Rotors'
 
-import {rotorII} from './Rotors'
-import {rotorIII} from './Rotors'
-import {rotorIV} from './Rotors'
-import {reflector} from './Rotors'
-import {reverseIV} from './Rotors'
-import {reverseIII} from './Rotors'
-import {reverseII} from './Rotors'
-import {reverseI} from './Rotors'
-import {testR} from './Rotors'
+// import {rotorII} from './Rotors'
+// import {rotorIII} from './Rotors'
+// import {rotorIV} from './Rotors'
+// import {reflector} from './Rotors'
+// import {reverseIV} from './Rotors'
+// import {reverseIII} from './Rotors'
+// import {reverseII} from './Rotors'
+// import {reverseI} from './Rotors'
+// import {testR} from './Rotors'
+import {Rotors} from './Rotors'
 
 
 import MessageBoard from './MessageBoard';
@@ -42,6 +43,7 @@ class App extends Component{
   }//end of state
 
 
+
   // enigma =(e)=>{
   //   //this.state.alphabet[this.state.rotorIV[this.state.alphabet.indexOf(e.key.toUpperCase())]]
   //   let input = this.state.alphabet.indexOf(e.key.toUpperCase())
@@ -54,9 +56,7 @@ class App extends Component{
   glow = (e) =>{
     // console.log(e)
     if(this.state.alphabet.includes(e.key.toUpperCase()) ){
-    this.setState({
-      cipher:this.state.cipher+e.key.toUpperCase()
-    })
+   
     let test = document.getElementById(e.key.toUpperCase())
     test.setAttribute("class", "key letter hover");
     // setTimeout(()=>test.setAttribute("class", "key letter"), 1000)
@@ -71,36 +71,52 @@ class App extends Component{
 
   }
 
+  test = () =>{
 
-  seconds = () =>{
-     this.setState({///this always happens when function is called. Right rotor always moves with every keypress
+  }
+
+  // if(this.state.r>25){await this.setState({r:0})}
+  //   if(this.state.m>25){ await this.setState({m:0})}
+  //   if(this.state.l>25){ await this.setState({l:0})}
+
+
+  seconds =  async () =>{
+     await this.setState({///this always happens when function is called. Right rotor always moves with every keypress
       r:this.state.r+1
     })
+      if(this.state.r>25){await this.setState({r:0})}
+
     // console.log(this.state.r+1)
 
   }
 
-  minutes =()=>{
-    this.setState({///this always happens when function is called. Right rotor always moves with every keypress
+  minutes = async ()=>{
+     await this.setState({///this always happens when function is called. Right rotor always moves with every keypress
       m:this.state.m+1
     })
+        if(this.state.m>25){ await this.setState({m:0})}
+
   }
 
-  hours = () =>{
-    this.setState({///this always happens when function is called. Right rotor always moves with every keypress
+  hours = async () =>{
+    await this.setState({///this always happens when function is called. Right rotor always moves with every keypress
       l:this.state.l+1
     })
+        if(this.state.l>25){ await this.setState({l:0})}
+
   }
 
 
-  test = ()=>{
-    let p1 = document.getElementById('p1').value//returns "III"
-    console.log(p1)/// logs "III"
-    console.log(rotorIII) ///logs [....] some array
-    console.log(testR[`${p1}`])
-    // let meh = rotors[`rotor${p1}`] //trying to set meh to that array with interpolation
-    // console.log(meh)///trying to log that array
-  }
+  // test = ()=>{
+  //   let p1 = document.getElementById('p1').value//returns "III"
+  //   console.log(p1)/// logs "III"
+  //   // console.log(rotorIII) ///logs [....] some array
+  //   console.log(Rotors[`rotor${p1}`])
+  //   console.log(Rotors[`reverse${p1}`])
+
+  //   // let meh = rotors[`rotor${p1}`] //trying to set meh to that array with interpolation
+  //   // console.log(meh)///trying to log that array
+  // }
 
 
 
@@ -151,6 +167,9 @@ class App extends Component{
 
     clock = async (e)=>{///function to rotate element in an array remove first and push at end of array ||WORKS!!!!
       e.persist()
+      let p1 = document.getElementById('p1').value
+      let p2 = document.getElementById('p2').value
+      let p3 = document.getElementById('p3').value
     //just test using alphabet array //use rotors arrays in practice
     // // console.log(this.state.alphabet)
 
@@ -201,7 +220,8 @@ class App extends Component{
     // console.log(rotorII[0+this.state.r])
     // let t =e.currentTarget
     // console.log('r=',this.state.r)
-
+    // console.log(Rotors)
+    /////////////////////////////////////////////ENCRYPTION STARTS HERE///////////////////////////////////////////////////////////////
     let letter_pressed =this.state.alphabet.indexOf(e.key.toUpperCase())
     let I_to_r = this.state.r
     let input = letter_pressed+I_to_r
@@ -215,8 +235,9 @@ class App extends Component{
     else{
       input=input
     }
-
-    let p1_out = rotorI[input]////////////////////////
+    console.log(input)
+    console.log(Rotors[`rotor${p1}`])
+    let p1_out = Rotors[`rotor${p1}`][input]////////////////////////
     let r_to_m = this.state.m-this.state.r
     let p2_in = p1_out + r_to_m
     console.log(this.state.alphabet[p1_out])
@@ -231,7 +252,7 @@ class App extends Component{
       p2_in=p2_in
     }
 
-    let p2_out =rotorII[p2_in]////////////////////////
+    let p2_out =Rotors[`rotor${p2}`][p2_in]////////////////////////
     let m_to_l = this.state.l-this.state.m
     let p3_in = p2_out+m_to_l
 
@@ -247,7 +268,7 @@ class App extends Component{
       p3_in=p3_in
     }
 
-    let p3_out = rotorIII[p3_in]////////////////
+    let p3_out = Rotors[`rotor${p3}`][p3_in]////////////////
     let l_to_R = -this.state.l
     let ref_in = p3_out+l_to_R
     console.log(this.state.alphabet[p3_out])
@@ -262,9 +283,8 @@ class App extends Component{
       ref_in=ref_in
     }
     let R_to_l = this.state.l
-    let ref_out = reflector[ref_in] //////////////////
+    let ref_out = Rotors["reflector"][ref_in] //////////////////
     let rev_p3_in = ref_out+R_to_l
-    console.log(this.state.alphabet[rev_p3_in])
 
     if(rev_p3_in>25){
       rev_p3_in-=26
@@ -275,9 +295,11 @@ class App extends Component{
     else{
       rev_p3_in=rev_p3_in
     }
+    console.log(this.state.alphabet[rev_p3_in])
+
 
     let l_to_m = this.state.m-this.state.l
-    let rev_p3_out= reverseIII[rev_p3_in]////////////////////////
+    let rev_p3_out= Rotors[`reverse${p3}`][rev_p3_in]////////////////////////
     let rev_p2_in= rev_p3_out+l_to_m
 
     if(rev_p2_in>25){
@@ -292,7 +314,7 @@ class App extends Component{
     console.log(this.state.alphabet[rev_p2_in])
 
     let m_to_r = this.state.r-this.state.m
-    let rev_p2_out = reverseII[rev_p2_in]
+    let rev_p2_out = Rotors[`reverse${p2}`][rev_p2_in]//////////////
     let rev_p1_in = rev_p2_out+m_to_r
     
     if(rev_p1_in>25){
@@ -309,7 +331,7 @@ class App extends Component{
 
 
     let r_to_I = -this.state.r
-    let rev_p1_out =reverseI[rev_p1_in]
+    let rev_p1_out =Rotors[`reverse${p1}`][rev_p1_in]
     let out = rev_p1_out +r_to_I
 
     if(out>25){
@@ -324,6 +346,9 @@ class App extends Component{
     }
     console.log(out)
     console.log(this.state.alphabet[out])
+    this.setState({
+      cipher:this.state.cipher+this.state.alphabet[out]
+    })
 
    
   }
@@ -340,26 +365,16 @@ class App extends Component{
 //this.state.rotorIV[this.state.alphabet.indexOf(e.key)]
 
 plug =(e) =>{
-  let p1 = e.target.value
-  let p2 = e.target.previousSibling.innerText
+  let p1 = e.target.value.toUpperCase()
 
+  let p2 = e.target.previousSibling.innerText
+let x = e.target
  let t = document.getElementsByClassName(p1)[0].nextSibling
  t.value = p2
+ x.value =e.target.value.toUpperCase()
 }
 
-getUserMessages = ()=>{
-  fetch('http://localhost:3000/user_messages',{
-    method: "GET",
-    headers:{
-      Authorization: `Bearer ${localStorage.getItem('token')}`
-    }
-  })
-  .then(res => res.json())
-  .then(user_messages => console.log(user_messages))
-}
-componentDidMount =() =>{
-  this.getUserMessages()
-}
+
 
   render(){
         // console.log(this.state.l,this.state.m, this.state.r)

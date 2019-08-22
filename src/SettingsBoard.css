@@ -2,6 +2,34 @@
     /* float:left;
     padding-left: 10px; */
     text-align: center;
-    display: inline-block
+    display: inline-block;
+    padding: 20px;
+    border: 5px solid rgb(131, 129, 127);
+    margin:10px
+
+}
+.dbutton{
+    background-color: #0095ff;
+    width:70px;
+
+
+}
+
+.index{
+    font-size: 30px;
+    font-family: 'Special Elite', cursive;
+    
+    padding:10px;
+    /* font-size:  */
+    color: white;
+
+}
+
+.menu{
+    font-size: 20px;
+    font-family: 'Special Elite', cursive;
+    padding:20px;
+
+
 
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './OutputBoard.css'
 
 
 class OutputBoard extends Component{
@@ -58,24 +59,34 @@ class OutputBoard extends Component{
         .then(blah => console.log(blah))
 
     }
+
+    clear = () =>{
+
+    }
    
     
     render(){
         // console.log(this.props.l,this.props.m,this.props.r)
 
         return(
-            <div align="center">
-                
-                <label>Message:</label>
-                <textarea type="text" id="plaintext" onKeyPress={(e)=>{this.props.glow(e);this.props.clock(e)}} value={this.state.plain} onChange={(e)=>this.onChange(e)} onKeyUp={this.props.dim}/>
-                <label> Cipher:</label>
-                <textarea type="text" id="cipher" value={this.props.cipher}  /><br></br>
-                <button onClick={this.createMessage}>Save</button>
-                <button onClick={this.props.test}  >Clear</button>
-
-
+            <div align="center" class="board" >
+                <div class="box">
+                    <label>PlainText:</label>
+                    <textarea class="area" rows="1" type="text" id="plaintext" onKeyPress={(e)=>{this.props.glow(e);this.props.clock(e)}} value={this.state.plain} onChange={(e)=>this.onChange(e)} onKeyUp={this.props.dim}/>
+                </div>
+                <div class="box">
 
                 
+                    <label>  CipherText:</label>
+                    <textarea class="area" rows="1" type="text" id="cipher" value={this.props.cipher}  /><br></br>
+                </div>
+                <div class="box">
+                    <button class="button" onClick={this.createMessage} >Save</button>
+                    <button class="button"  onClick={this.props.test}  >Clear</button>
+
+                </div>
+
+                    
             </div>
         )
     }

@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url('https://cdn.pixabay.com/photo/2016/01/19/01/16/rotor-cipher-machine-1147801_960_720.jpg'), linear-gradient(rgba(255,255,255,0.5); */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.178), rgba(255, 255, 255, 0.239)), url("https://cdn.pixabay.com/photo/2016/01/19/01/16/rotor-cipher-machine-1147801_960_720.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-family: 'Special Elite', cursive;
+  
+  color: white;
+  font-size: 75px;
 }

@@ -8,7 +8,7 @@ class PlugBoard extends Component{
         // console.log(this.props.plug)
         return( 
         <div align="center">
-            <div class="board" align="center">
+            <div class="pboard" align="center">
 
                 <div class="plugpair" >
                     <div className="A">
