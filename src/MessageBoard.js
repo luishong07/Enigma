@@ -28,7 +28,7 @@ class MessageBoard extends Component{
 
 
     render(){
-        console.log(this.state.u_messages)
+        // console.log(this.state.u_messages)
         return(
 
             <table class="table" align="center" >

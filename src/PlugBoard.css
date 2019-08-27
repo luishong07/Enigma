@@ -11,7 +11,24 @@
 .plugpair{
     float:left;
     padding-left: 10px;
-    text-align: center
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px
+
 
 }
 
+.plugin{
+    font-family: 'Special Elite', cursive;
+    font-size: 30px
+}
+
+.button{
+    background-color: #0095ff;
+    text-align: center;
+    font-size: 20px;
+    /* padding: 10px 20px; */
+    width:100px;
+    /* font-family: "Times New Roman", Times, serif; */
+    font-family: 'Special Elite', cursive;
+}

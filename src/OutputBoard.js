@@ -57,6 +57,7 @@ class OutputBoard extends Component{
         })
         .then(res => res.json())
         .then(blah => console.log(blah))
+        .then(window.location.reload())
 
     }
 
@@ -82,9 +83,13 @@ class OutputBoard extends Component{
                 </div>
                 <div class="box">
                     <button class="button" onClick={this.createMessage} >Save</button>
-                    <button class="button"  onClick={this.props.test}  >Clear</button>
+                    <button class="button"    >Clear</button>
 
                 </div>
+                {/* <div class="box">
+                    <label>Test:</label>
+                    <textarea onKeyPress={(e)=>{this.props.test(e)}} class="area" rows="1" /> 
+                </div> */}
 
                     
             </div>

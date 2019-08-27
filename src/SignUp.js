@@ -54,7 +54,7 @@ class SignUp extends Component{
                         <label>Username</label>
                         <input name="username"  value ={this.state.username} onChange={(e)=>{this.onChange(e)}}/>
                         <label>Password</label>
-                        <input name="password" value={this.state.password} onChange={(e)=>{this.onChange(e)}}/>
+                        <input name="password" type='password' value={this.state.password} onChange={(e)=>{this.onChange(e)}}/>
                         <button type="submit" onClick={this.onSubmit}>Sign Up</button>
 
                     </form>

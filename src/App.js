@@ -36,7 +36,8 @@ class App extends Component{
     test:[],
     alphabet:["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
     pressedLetter:"",
-    cipher:""
+    cipher:"",
+    emergency:''
     
 
 
@@ -71,9 +72,7 @@ class App extends Component{
 
   }
 
-  test = () =>{
-
-  }
+  
 
   // if(this.state.r>25){await this.setState({r:0})}
   //   if(this.state.m>25){ await this.setState({m:0})}
@@ -86,7 +85,7 @@ class App extends Component{
     })
       if(this.state.r>25){await this.setState({r:0})}
 
-    // console.log(this.state.r+1)
+    // console.log(this.state.r+1,"TEST CARLOS")
 
   }
 
@@ -222,9 +221,29 @@ class App extends Component{
     // console.log('r=',this.state.r)
     // console.log(Rotors)
     /////////////////////////////////////////////ENCRYPTION STARTS HERE///////////////////////////////////////////////////////////////
-    let letter_pressed =this.state.alphabet.indexOf(e.key.toUpperCase())
+
+    let inputs = document.getElementsByTagName('input')
+    // console.log(inputs)
+    let arr_plugs = [...inputs]
+    console.log(arr_plugs)
+    // console.log(e.key)
+    let s_plug =arr_plugs.find(p =>{
+     return p.value==e.key.toUpperCase()
+    })
+    let into_Rotors = s_plug.previousElementSibling.innerHTML
+    console.log(into_Rotors)
+
+
+    console.log(e.key.toUpperCase(),"BEFORE SWAP , IN")
+
+
+    console.log(into_Rotors,"AFTER SWAP , OUT")
+
+    let letter_pressed =this.state.alphabet.indexOf(into_Rotors)
     let I_to_r = this.state.r
+    console.log(I_to_r,"I to r")
     let input = letter_pressed+I_to_r
+
 
     if(input>25){
       input-=26
@@ -236,9 +255,10 @@ class App extends Component{
       input=input
     }
     console.log(input)
-    console.log(Rotors[`rotor${p1}`])
+    // console.log(Rotors[`rotor${p1}`])
     let p1_out = Rotors[`rotor${p1}`][input]////////////////////////
     let r_to_m = this.state.m-this.state.r
+    console.log(r_to_m ,"r to m")
     let p2_in = p1_out + r_to_m
     console.log(this.state.alphabet[p1_out])
 
@@ -251,9 +271,11 @@ class App extends Component{
     else{
       p2_in=p2_in
     }
+    console.log(p2_in)
 
     let p2_out =Rotors[`rotor${p2}`][p2_in]////////////////////////
     let m_to_l = this.state.l-this.state.m
+    console.log(m_to_l ," m to l")
     let p3_in = p2_out+m_to_l
 
     console.log(this.state.alphabet[p2_out])
@@ -267,9 +289,11 @@ class App extends Component{
     else{
       p3_in=p3_in
     }
+    console.log(p3_in)
 
     let p3_out = Rotors[`rotor${p3}`][p3_in]////////////////
     let l_to_R = -this.state.l
+    console.log(l_to_R,' l to ref')
     let ref_in = p3_out+l_to_R
     console.log(this.state.alphabet[p3_out])
 
@@ -282,9 +306,14 @@ class App extends Component{
     else{
       ref_in=ref_in
     }
+    console.log(ref_in)
     let R_to_l = this.state.l
+    console.log(R_to_l,'ref to l')
     let ref_out = Rotors["reflector"][ref_in] //////////////////
+
     let rev_p3_in = ref_out+R_to_l
+    console.log(this.state.alphabet[ref_out])
+    // console.log(rev_p3_in)
 
     if(rev_p3_in>25){
       rev_p3_in-=26
@@ -295,12 +324,17 @@ class App extends Component{
     else{
       rev_p3_in=rev_p3_in
     }
-    console.log(this.state.alphabet[rev_p3_in])
+    console.log(rev_p3_in,"rev_p3_in")
 
 
     let l_to_m = this.state.m-this.state.l
+    console.log(l_to_m,"l to m")
     let rev_p3_out= Rotors[`reverse${p3}`][rev_p3_in]////////////////////////
+    console.log(Rotors[`reverse${p3}`])
     let rev_p2_in= rev_p3_out+l_to_m
+    console.log(rev_p2_in,rev_p3_out,"here")
+    console.log(rev_p2_in,"here")
+    console.log(this.state.alphabet[rev_p2_in],"problem")
 
     if(rev_p2_in>25){
       rev_p2_in-=26
@@ -311,12 +345,14 @@ class App extends Component{
     else{
       rev_p2_in=rev_p2_in
     }
-    console.log(this.state.alphabet[rev_p2_in])
+    console.log(rev_p2_in,"what")
 
     let m_to_r = this.state.r-this.state.m
+    console.log(m_to_r,"m to r")
     let rev_p2_out = Rotors[`reverse${p2}`][rev_p2_in]//////////////
     let rev_p1_in = rev_p2_out+m_to_r
     
+    console.log(this.state.alphabet[rev_p2_out])
     if(rev_p1_in>25){
       rev_p1_in-=26
     }
@@ -327,13 +363,15 @@ class App extends Component{
       rev_p1_in=rev_p1_in
     }
     // console.log(rev_p1_in,"this")
-    console.log(this.state.alphabet[rev_p1_in])
+    console.log(rev_p1_in)
 
 
     let r_to_I = -this.state.r
+    console.log(r_to_I,"r to input")
     let rev_p1_out =Rotors[`reverse${p1}`][rev_p1_in]
     let out = rev_p1_out +r_to_I
 
+    console.log(this.state.alphabet[rev_p1_out])
     if(out>25){
       out-=26
     }
@@ -345,9 +383,22 @@ class App extends Component{
       out = out
     }
     console.log(out)
-    console.log(this.state.alphabet[out])
+    console.log(this.state.alphabet[out],"BEFORE SWAP .OUT")
+
+    let out_rotor = document.getElementsByClassName(this.state.alphabet[out])
+  
+    console.log( out_rotor[0].innerHTML)
+
+    console.log(out_rotor[0],"HERE")
+
+    let letter_out =out_rotor[0].nextElementSibling.value
+
+    console.log(letter_out,"AFTER SWAP, OUT")
+
+
+
     this.setState({
-      cipher:this.state.cipher+this.state.alphabet[out]
+      cipher:this.state.cipher+letter_out
     })
 
    
@@ -374,6 +425,17 @@ let x = e.target
  x.value =e.target.value.toUpperCase()
 }
 
+test = (e) =>{
+ 
+  
+  
+  //////////////////////////////////////////////////////////////
+
+  // let wut = document.getElementsByClassName("A")
+  
+  // console.log( wut[0].innerHTML)
+
+}
 
 
   render(){

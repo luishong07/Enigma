@@ -30,9 +30,9 @@ class SettingsBoard extends Component{
                         <select class="menu" id="p3" onChange={this.alert}>
                             <option >I</option>
                             <option >II</option>
-                            <option selected="selected">III</option>
+                            <option >III</option>
                             <option>IV</option>
-                            <option>V</option>
+                            <option selected="selected">V</option>
                         </select>
                         <br></br>
                         <button class="dbutton">∆</button>
@@ -43,9 +43,9 @@ class SettingsBoard extends Component{
                     <div class='setting'>
                         <select class="menu" id="p2" onChange={this.alert}>
                             <option>I</option>
-                            <option selected="selected">II</option>
+                            <option >II</option>
                             <option>III</option>
-                            <option>IV</option>
+                            <option selected="selected">IV</option>
                             <option>V</option>
                         </select>
                         <br></br>
@@ -58,7 +58,7 @@ class SettingsBoard extends Component{
                         <select class="menu" id="p1" onChange={this.alert}>
                             <option>I</option>
                             <option>II</option>
-                            <option >III</option>
+                            <option selected="selected" >III</option>
                             <option>IV</option>
                             <option>V</option>
                         </select>
