@@ -70,25 +70,25 @@ class OutputBoard extends Component{
         // console.log(this.props.l,this.props.m,this.props.r)
 
         return(
-            <div align="center" class="board" >
-                <div class="box">
+            <div align="center" className="board" >
+                <div className="box">
                     <label>PlainText:</label>
-                    <textarea class="area" rows="1" type="text" id="plaintext" onKeyPress={(e)=>{this.props.glow(e);this.props.clock(e)}} value={this.state.plain} onChange={(e)=>this.onChange(e)} onKeyUp={this.props.dim}/>
+                    <textarea className="area" rows="1" type="text" id="plaintext" onKeyPress={(e)=>{this.props.glow(e);this.props.clock(e)}} value={this.state.plain} onChange={(e)=>this.onChange(e)} onKeyUp={this.props.dim}/>
                 </div>
-                <div class="box">
+                <div className="box">
 
                 
                     <label>  CipherText:</label>
-                    <textarea class="area" rows="1" type="text" id="cipher" value={this.props.cipher}  /><br></br>
+                    <textarea className="area" rows="1" type="text" id="cipher" value={this.props.cipher} readOnly /><br></br>
                 </div>
-                <div class="box">
-                    <button class="button" onClick={this.createMessage} >Save</button>
-                    <button class="button"    >Clear</button>
+                <div className="box">
+                    <button className="button" onClick={this.createMessage} >Save</button>
+                    <button className="button"    >Clear</button>
 
                 </div>
-                {/* <div class="box">
+                {/* <div className="box">
                     <label>Test:</label>
-                    <textarea onKeyPress={(e)=>{this.props.test(e)}} class="area" rows="1" /> 
+                    <textarea onKeyPress={(e)=>{this.props.test(e)}} className="area" rows="1" /> 
                 </div> */}
 
                     

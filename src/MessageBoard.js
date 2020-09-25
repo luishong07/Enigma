@@ -18,8 +18,8 @@ class MessageBoard extends Component{
         })
         .then(res => res.json())
         .then(user_messages => {
-            // console.log(user_messages)
             this.setState({u_messages:user_messages})
+
         })
       }
       componentDidMount =() =>{
@@ -28,10 +28,9 @@ class MessageBoard extends Component{
 
 
     render(){
-        // console.log(this.state.u_messages)
         return(
 
-            <table class="table" align="center" >
+            <table className="table" align="center" >
                 <tbody>
                     <tr>
                         <th>
@@ -49,9 +48,9 @@ class MessageBoard extends Component{
                                 Cipher
                             </h3>
                         </th>
-                        </tr>
+                    </tr>
                     {this.state.u_messages.map(m=>{
-                    return   <Message m={m}/>
+                    return   <Message key = {m.id}  m={m}/>
                     })}
 
                     

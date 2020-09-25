@@ -16,37 +16,37 @@ class LampBoard extends Component{
                         return <span className="key" ref={letter}  >{letter}</span>
                     })} */}
 
-                    <div class="keyboard">
+                    <div className="keyboard">
                     
                     <div className="row1">
-                        <div class="key letter" id="Q">
+                        <div className="key letter" id="Q">
                             Q
                         </div>
-                            <div class="key letter" id="W">
+                            <div className="key letter" id="W">
                             W
                         </div>
-                            <div class="key letter" id="E">
+                            <div className="key letter" id="E">
                             E
                         </div>
-                            <div class="key letter" id="R">
+                            <div className="key letter" id="R">
                             R
                         </div>
-                            <div class="key letter" id="T">
+                            <div className="key letter" id="T">
                             T
                         </div>
-                            <div class="key letter" id="Y">
+                            <div className="key letter" id="Y">
                             Y
                         </div>
-                            <div class="key letter" id="U">
+                            <div className="key letter" id="U">
                             U
                         </div>
-                            <div class="key letter" id="I">
+                            <div className="key letter" id="I">
                             I
                         </div>
-                            <div class="key letter" id="O">
+                            <div className="key letter" id="O">
                             O
                         </div>
-                            <div class="key letter" id="P">
+                            <div className="key letter" id="P">
                             P
                         </div>
                     </div>
@@ -55,52 +55,52 @@ class LampBoard extends Component{
                    
                             
                     <div className="row2">
-                        <div class="key letter" id="A">
+                        <div className="key letter" id="A">
                             A
                         </div>
-                            <div class="key letter" id="S">
+                            <div className="key letter" id="S">
                             S
                         </div>
-                            <div class="key letter" id="D">
+                            <div className="key letter" id="D">
                             D
                         </div>
-                            <div class="key letter" id="F">
+                            <div className="key letter" id="F">
                             F
                         </div>
-                            <div class="key letter" id="G">
+                            <div className="key letter" id="G">
                             G
                         </div>
-                            <div class="key letter" id="H">
+                            <div className="key letter" id="H">
                             H
                         </div>
-                            <div class="key letter" id="J">
+                            <div className="key letter" id="J">
                             J
                         </div>
-                            <div class="key letter" id="K">
+                            <div className="key letter" id="K">
                             K
                         </div>
-                            <div class="key letter" id="L">
+                            <div className="key letter" id="L">
                             L
                         </div>
                     </div>
 
                     <div className="row3">
-                        <div class="key letter" id="Z">
+                        <div className="key letter" id="Z">
                             Z
                         </div>  
-                            <div class="key letter" id="X">
+                            <div className="key letter" id="X">
                             X
                         </div>
-                            <div class="key letter" id="C">
+                            <div className="key letter" id="C">
                             C
                         </div>
-                            <div class="key letter" id="V">
+                            <div className="key letter" id="V">
                             V
-                        </div><div class="key letter" id="B">
+                        </div><div className="key letter" id="B">
                             B
-                        </div><div class="key letter" id="N">
+                        </div><div className="key letter" id="N">
                             N
-                        </div><div class="key letter" id="M">
+                        </div><div className="key letter" id="M">
                             M
                         </div>
                     </div>

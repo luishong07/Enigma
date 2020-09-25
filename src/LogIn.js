@@ -30,7 +30,7 @@ class LogIn extends Component{
         })
         .then(res => res.json())
         .then(result => {
-            console.log(result.error,"llevela");
+            console.log(result.error);
         localStorage.setItem("token", result.auth_token)
         localStorage.setItem("id", result.id)
 

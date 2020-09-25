@@ -90,7 +90,7 @@ class App extends Component{
   }
 
   minutes = async ()=>{
-     await this.setState({///this always happens when function is called. Right rotor always moves with every keypress
+     await this.setState({
       m:this.state.m+1
     })
         if(this.state.m>25){ await this.setState({m:0})}
@@ -98,7 +98,7 @@ class App extends Component{
   }
 
   hours = async () =>{
-    await this.setState({///this always happens when function is called. Right rotor always moves with every keypress
+    await this.setState({
       l:this.state.l+1
     })
         if(this.state.l>25){ await this.setState({l:0})}
@@ -215,6 +215,7 @@ class App extends Component{
     if(this.state.r>25){await this.setState({r:0})}
     if(this.state.m>25){ await this.setState({m:0})}
     if(this.state.l>25){ await this.setState({l:0})}
+    
     console.log(this.state.l,this.state.m,this.state.r)
     // console.log(rotorII[0+this.state.r])
     // let t =e.currentTarget
@@ -228,7 +229,7 @@ class App extends Component{
     console.log(arr_plugs)
     // console.log(e.key)
     let s_plug =arr_plugs.find(p =>{
-     return p.value==e.key.toUpperCase()
+     return p.value===e.key.toUpperCase()
     })
     let into_Rotors = s_plug.previousElementSibling.innerHTML
     console.log(into_Rotors)
@@ -254,8 +255,13 @@ class App extends Component{
     else{
       input=input
     }
-    console.log(input)
+    // console.log(input)
+    // console.log(Rotors[`rotorI`])
+    console.log(p1)
+    console.log("HERE",`rotor${p1}`,"YOHOHOHO")
+
     // console.log(Rotors[`rotor${p1}`])
+
     let p1_out = Rotors[`rotor${p1}`][input]////////////////////////
     let r_to_m = this.state.m-this.state.r
     console.log(r_to_m ,"r to m")
