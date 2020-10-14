@@ -20,7 +20,6 @@ class SettingsBoard extends Component{
 
     
     render(){
-        // console.log(this.props.l,this.props.m,this.props.r)
         return(
             <div align="center">
                <h1>Enigma</h1>
@@ -35,7 +34,7 @@ class SettingsBoard extends Component{
                             <option >V</option>
                         </select>
                         <br></br>
-                        <button className="dbutton">∆</button>
+                        <button className="dbutton" onClick={this.props.antiHours}>∆</button>
                         <div className="index">{this.props.l+1}</div>
                         <button className="dbutton" onClick={this.props.hours}>∇</button>
                     </div>
@@ -50,7 +49,7 @@ class SettingsBoard extends Component{
                             <option>I</option>
                         </select>
                         <br></br>
-                        <button className="dbutton">∆</button>
+                        <button className="dbutton" onClick={this.props.antiMinutes}>∆</button>
                         <div  className="index" >{this.props.m+1}</div>
                         <button className="dbutton" onClick={this.props.minutes}>∇</button>
                     </div>
@@ -66,7 +65,7 @@ class SettingsBoard extends Component{
                             <option>II</option>
                         </select>
                         <br></br>
-                        <button className="dbutton">∆</button>
+                        <button className="dbutton" onClick={this.props.antiSeconds}>∆</button>
                         <div className="index">{this.props.r+1}</div>
                         <button className="dbutton" onClick={this.props.seconds}>∇</button>
                     </div>

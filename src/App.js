@@ -6,17 +6,6 @@ import LampBoard from './LampBoard'
 import PlugBoard from './PlugBoard'
 import SettingsBoard from './SettingsBoard'
 import OutputBoard from './OutputBoard'
-// import {rotorI} from './Rotors'
-
-// import {rotorII} from './Rotors'
-// import {rotorIII} from './Rotors'
-// import {rotorIV} from './Rotors'
-// import {reflector} from './Rotors'
-// import {reverseIV} from './Rotors'
-// import {reverseIII} from './Rotors'
-// import {reverseII} from './Rotors'
-// import {reverseI} from './Rotors'
-// import {testR} from './Rotors'
 import {Rotors} from './Rotors'
 
 
@@ -38,29 +27,17 @@ class App extends Component{
     pressedLetter:"",
     cipher:"",
     emergency:''
-    
-
-
   }//end of state
 
 
 
-  // enigma =(e)=>{
-  //   //this.state.alphabet[this.state.rotorIV[this.state.alphabet.indexOf(e.key.toUpperCase())]]
-  //   let input = this.state.alphabet.indexOf(e.key.toUpperCase())
-  //   // console.log(input,e.key.toUpperCase())
-  //   let put1 = rotorIV[input]
-  //   // console.log(this.state.alphabet[put1])
-
-  // }
+  
 
   glow = (e) =>{
-    // console.log(e)
     if(this.state.alphabet.includes(e.key.toUpperCase()) ){
    
     let test = document.getElementById(e.key.toUpperCase())
     test.setAttribute("class", "key letter hover");
-    // setTimeout(()=>test.setAttribute("class", "key letter"), 1000)
     
     }
   }
@@ -85,8 +62,13 @@ class App extends Component{
     })
       if(this.state.r>25){await this.setState({r:0})}
 
-    // console.log(this.state.r+1,"TEST CARLOS")
+    console.log(this.state.r+1,"seconds")
 
+  }
+
+  antiSeconds = async () => {
+    console.log("antiseconds")
+    
   }
 
   minutes = async ()=>{
@@ -97,6 +79,10 @@ class App extends Component{
 
   }
 
+  antiMinutes = async () => {
+    console.log('antiminutes')
+  }
+
   hours = async () =>{
     await this.setState({
       l:this.state.l+1
@@ -105,83 +91,18 @@ class App extends Component{
 
   }
 
-
-  // test = ()=>{
-  //   let p1 = document.getElementById('p1').value//returns "III"
-  //   console.log(p1)/// logs "III"
-  //   // console.log(rotorIII) ///logs [....] some array
-  //   console.log(Rotors[`rotor${p1}`])
-  //   console.log(Rotors[`reverse${p1}`])
-
-  //   // let meh = rotors[`rotor${p1}`] //trying to set meh to that array with interpolation
-  //   // console.log(meh)///trying to log that array
-  // }
+  antiHours = async () => {
+    console.log("antihours")
+  }
 
 
-
-  // test = async () =>{
-  //   console.log(this.state.l+1,this.state.m+1,this.state.r+1,"before conditionals")
-
-  //   if(this.state.r===25){//if right rotor makes full cycle 
-  //     await this.setState({
-  //       m:this.state.m+1///make middle rotor take one step
-  //     })
-  //     // console.log(this.state.r)
-  //     if(this.state.m===25){//if that step of middle rotor is the final step of a cycle
-  //       await this.setState({
-  //         l:this.state.l+1,//make the left rotor take one step
-  //         m:this.state.m=0
-  //       })
-  //     }
-  //    }
-
-  //   else{
-  //     if(this.state.m===25){
-  //       await this.setState({
-  //         m:this.state.m+1,
-  //         l:this.state.l+1
-  //       })
-  //     }
-  //   }
-
-  //   await this.setState({///this always happens when function is called. Right rotor always moves with every keypress
-  //     r:this.state.r+1
-  //   })
-  //   // console.log(this.state.r,"plus ultra")
-
-  //   if(this.state.r>25){await this.setState({r:0})}
-  //   if(this.state.m>25){ await this.setState({m:0})}
-  //   if(this.state.l>25){ await this.setState({l:0})}
-
-  //   console.log(this.state.l+1,this.state.m+1,this.state.r+1,"after conditionals")
-
-  //   // await this.setState({///this always happens when function is called. Right rotor always moves with every keypress
-  //   //   r:this.state.r+1
-  //   // })
-  //   // // console.log(this.state.r+1)
-  //   let bleh =rotorI[0+this.state.r]
-  //   console.log(this.state.alphabet[bleh])
-
-  // }
-
-    clock = async (e)=>{///function to rotate element in an array remove first and push at end of array ||WORKS!!!!
+  
+  clock = async (e)=>{///function to rotate element in an array remove first and push at end of array ||WORKS!!!!
       e.persist()
       let p1 = document.getElementById('p1').value
       let p2 = document.getElementById('p2').value
       let p3 = document.getElementById('p3').value
-    //just test using alphabet array //use rotors arrays in practice
-    // // console.log(this.state.alphabet)
-
-    // let f = this.state.alphabet.shift()
-    // // console.log(f)
-    // // console.log(this.state.alphabet)
-    // let na = this.state.alphabet
-    // na.push(f)
-    // this.setState({
-    //   alphabet:na
-    // })
-    // // console.log(this.state.alphabet)
-
+    
     ///////////////////////////////////////////////
     
 
@@ -210,17 +131,13 @@ class App extends Component{
     await this.setState({///this always happens when function is called. Right rotor always moves with every keypress
       r:this.state.r+1
     })
-    // console.log(this.state.r,"plus ultra")
 
     if(this.state.r>25){await this.setState({r:0})}
     if(this.state.m>25){ await this.setState({m:0})}
     if(this.state.l>25){ await this.setState({l:0})}
     
     console.log(this.state.l,this.state.m,this.state.r)
-    // console.log(rotorII[0+this.state.r])
-    // let t =e.currentTarget
-    // console.log('r=',this.state.r)
-    // console.log(Rotors)
+   
     /////////////////////////////////////////////ENCRYPTION STARTS HERE///////////////////////////////////////////////////////////////
 
     let inputs = document.getElementsByTagName('input')
@@ -255,12 +172,11 @@ class App extends Component{
     else{
       input=input
     }
-    // console.log(input)
-    // console.log(Rotors[`rotorI`])
+    
     console.log(p1)
-    console.log("HERE",`rotor${p1}`,"YOHOHOHO")
+    console.log("HERE",`rotor${p1}`)
 
-    // console.log(Rotors[`rotor${p1}`])
+    
 
     let p1_out = Rotors[`rotor${p1}`][input]////////////////////////
     let r_to_m = this.state.m-this.state.r
@@ -403,9 +319,9 @@ class App extends Component{
 
 
 
-    this.setState({
-      cipher:this.state.cipher+letter_out
-    })
+  this.setState({
+    cipher:this.state.cipher+letter_out
+  })
 
    
   }
@@ -413,14 +329,7 @@ class App extends Component{
   
   
 
-  // show = (e) =>{
-  //   console.log(e.key)
-  //   this.setState({
-  //     message: this.state.message+this.state.alphabet[this.state.rotorIV[this.state.alphabet.indexOf(e.key.toUpperCase())]]
-  //   })
-  // }
-//this.state.rotorIV[this.state.alphabet.indexOf(e.key)]
-
+  
 plug =(e) =>{
   let p1 = e.target.value.toUpperCase()
 
@@ -431,18 +340,6 @@ let x = e.target
  x.value =e.target.value.toUpperCase()
 }
 
-test = (e) =>{
- 
-  
-  
-  //////////////////////////////////////////////////////////////
-
-  // let wut = document.getElementsByClassName("A")
-  
-  // console.log( wut[0].innerHTML)
-
-}
-
 
   render(){
         // console.log(this.state.l,this.state.m, this.state.r)
@@ -450,14 +347,29 @@ test = (e) =>{
     return(
       <div  >
      
-        <SettingsBoard r={this.state.r} m={this.state.m} l ={this.state.l} seconds={this.seconds} minutes={this.minutes} hours={this.hours}/>
+        <SettingsBoard r={this.state.r} 
+                       m={this.state.m}
+                       l ={this.state.l} 
+                       seconds={this.seconds} 
+                       minutes={this.minutes} 
+                       hours={this.hours}
+                       antiHours={this.antiHours}
+                       antiMinutes={this.antiMinutes}
+                       antiSeconds={this.antiSeconds}  
+                       />
 
-        <LampBoard letter={this.state.pressedLetter} alphabet={this.state.alphabet} />
+        <LampBoard letter={this.state.pressedLetter} 
+                   alphabet={this.state.alphabet} />
 
         <PlugBoard plug={this.plug}/>       
 
-        <OutputBoard glow={this.glow} dim={this.dim} cipher={this.state.cipher} clock={this.clock} r={this.state.r} m={this.state.m}
-        l={this.state.l} test={this.test} />
+        <OutputBoard glow={this.glow} 
+                     dim={this.dim} 
+                     cipher={this.state.cipher} 
+                     clock={this.clock} 
+                     r={this.state.r} 
+                     m={this.state.m}
+                     l={this.state.l} />
 
         <MessageBoard />
 

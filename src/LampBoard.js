@@ -7,15 +7,8 @@ class LampBoard extends Component{
     
     
     render(){
-        // console.log(this.props.letter.toUpperCase())
         return(
             <div >
-                
-                {/* <div className = "keyboard">
-                    {this.props.alphabet.map(letter => {
-                        return <span className="key" ref={letter}  >{letter}</span>
-                    })} */}
-
                     <div className="keyboard">
                     
                     <div className="row1">
