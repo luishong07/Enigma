@@ -15,31 +15,39 @@ class LampBoard extends Component{
                         <div className="key letter" id="Q">
                             Q
                         </div>
-                            <div className="key letter" id="W">
+
+                        <div className="key letter" id="W">
                             W
                         </div>
-                            <div className="key letter" id="E">
+
+                        <div className="key letter" id="E">
                             E
                         </div>
-                            <div className="key letter" id="R">
+
+                        <div className="key letter" id="R">
                             R
                         </div>
-                            <div className="key letter" id="T">
+
+                        <div className="key letter" id="T">
                             T
                         </div>
-                            <div className="key letter" id="Y">
+                        <div className="key letter" id="Y">
                             Y
                         </div>
-                            <div className="key letter" id="U">
+
+                        <div className="key letter" id="U">
                             U
                         </div>
-                            <div className="key letter" id="I">
+
+                        <div className="key letter" id="I">
                             I
                         </div>
-                            <div className="key letter" id="O">
+
+                        <div className="key letter" id="O">
                             O
                         </div>
-                            <div className="key letter" id="P">
+
+                        <div className="key letter" id="P">
                             P
                         </div>
                     </div>
@@ -51,28 +59,36 @@ class LampBoard extends Component{
                         <div className="key letter" id="A">
                             A
                         </div>
-                            <div className="key letter" id="S">
+                        
+                        <div className="key letter" id="S">
                             S
                         </div>
-                            <div className="key letter" id="D">
+
+                        <div className="key letter" id="D">
                             D
                         </div>
-                            <div className="key letter" id="F">
+
+                        <div className="key letter" id="F">
                             F
                         </div>
-                            <div className="key letter" id="G">
+
+                        <div className="key letter" id="G">
                             G
                         </div>
-                            <div className="key letter" id="H">
+
+                        <div className="key letter" id="H">
                             H
                         </div>
-                            <div className="key letter" id="J">
+
+                        <div className="key letter" id="J">
                             J
                         </div>
-                            <div className="key letter" id="K">
+
+                        <div className="key letter" id="K">
                             K
                         </div>
-                            <div className="key letter" id="L">
+
+                        <div className="key letter" id="L">
                             L
                         </div>
                     </div>
@@ -80,20 +96,29 @@ class LampBoard extends Component{
                     <div className="row3">
                         <div className="key letter" id="Z">
                             Z
-                        </div>  
-                            <div className="key letter" id="X">
+                        </div>
+
+                        <div className="key letter" id="X">
                             X
                         </div>
-                            <div className="key letter" id="C">
+
+                        <div className="key letter" id="C">
                             C
                         </div>
-                            <div className="key letter" id="V">
+
+                        <div className="key letter" id="V">
                             V
-                        </div><div className="key letter" id="B">
+                        </div>
+
+                        <div className="key letter" id="B">
                             B
-                        </div><div className="key letter" id="N">
+                        </div>
+
+                        <div className="key letter" id="N">
                             N
-                        </div><div className="key letter" id="M">
+                        </div>
+
+                        <div className="key letter" id="M">
                             M
                         </div>
                     </div>
