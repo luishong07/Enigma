@@ -11,7 +11,7 @@ class LampBoard extends Component{
             <div >
                     <div className="keyboard">
                     
-                    <div className="row1">
+                    <div className="row">
                         <div className="key letter" id="Q">
                             Q
                         </div>
@@ -55,11 +55,11 @@ class LampBoard extends Component{
                 
                    
                             
-                    <div className="row2">
+                    <div className="row">
                         <div className="key letter" id="A">
                             A
                         </div>
-                        
+
                         <div className="key letter" id="S">
                             S
                         </div>
@@ -93,7 +93,7 @@ class LampBoard extends Component{
                         </div>
                     </div>
 
-                    <div className="row3">
+                    <div className="row">
                         <div className="key letter" id="Z">
                             Z
                         </div>
