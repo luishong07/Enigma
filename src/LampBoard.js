@@ -12,115 +12,115 @@ class LampBoard extends Component{
                     <div className="keyboard">
                     
                     <div className="row">
-                        <div className="key letter" id="Q">
+                        <span className="key letter" id="Q">
                             Q
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="W">
+                        <span className="key letter" id="W">
                             W
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="E">
+                        <span className="key letter" id="E">
                             E
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="R">
+                        <span className="key letter" id="R">
                             R
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="T">
+                        <span className="key letter" id="T">
                             T
-                        </div>
-                        <div className="key letter" id="Y">
+                        </span>
+                        <span className="key letter" id="Y">
                             Y
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="U">
+                        <span className="key letter" id="U">
                             U
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="I">
+                        <span className="key letter" id="I">
                             I
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="O">
+                        <span className="key letter" id="O">
                             O
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="P">
+                        <span className="key letter" id="P">
                             P
-                        </div>
+                        </span>
                     </div>
                     
                 
                    
                             
                     <div className="row">
-                        <div className="key letter" id="A">
+                        <span className="key letter" id="A">
                             A
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="S">
+                        <span className="key letter" id="S">
                             S
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="D">
+                        <span className="key letter" id="D">
                             D
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="F">
+                        <span className="key letter" id="F">
                             F
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="G">
+                        <span className="key letter" id="G">
                             G
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="H">
+                        <span className="key letter" id="H">
                             H
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="J">
+                        <span className="key letter" id="J">
                             J
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="K">
+                        <span className="key letter" id="K">
                             K
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="L">
+                        <span className="key letter" id="L">
                             L
-                        </div>
+                        </span>
                     </div>
 
                     <div className="row">
-                        <div className="key letter" id="Z">
+                        <span className="key letter" id="Z">
                             Z
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="X">
+                        <span className="key letter" id="X">
                             X
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="C">
+                        <span className="key letter" id="C">
                             C
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="V">
+                        <span className="key letter" id="V">
                             V
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="B">
+                        <span className="key letter" id="B">
                             B
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="N">
+                        <span className="key letter" id="N">
                             N
-                        </div>
+                        </span>
 
-                        <div className="key letter" id="M">
+                        <span className="key letter" id="M">
                             M
-                        </div>
+                        </span>
                     </div>
 
                     

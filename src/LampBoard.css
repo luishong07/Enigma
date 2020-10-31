@@ -25,8 +25,8 @@
   }
 
   .key{
-    /* justify-items: center; */
-    width: 50px; 
+    /*originals*/
+    /* width: 50px; 
     height:50px;
     display:inline-block;
     background-color:rgb(255, 255, 255);
@@ -34,8 +34,18 @@
     border: 1px solid black;
     font-size:30px;
     margin: 5px;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Special Elite', cursive; */
 
+    /*exercise*/
+    margin: 5px;
+    display: inline-block;
+    background-color:rgb(255, 255, 255);
+    border-radius:50%;
+    width: 50px; 
+    height:50px;
+    font-size:40px;
+    font-family: 'Special Elite', cursive;
+    line-height: 55px;
   }
 
   /* .letter{width:40px;} */
