@@ -19,7 +19,7 @@ import MessageBoard from './MessageBoard';
 class App extends Component{
 
   state={
-    r:0,//angular position of right rotor...no, not that angular
+    r:0,//angular position of right rotor...
     m:0,//angular position of middle rotor
     l:0,//angular position of left rotor
     test:[],
@@ -325,19 +325,15 @@ class App extends Component{
 
    
   }
-  
-  
-  
-
-  
+ 
 plug =(e) =>{
   let p1 = e.target.value.toUpperCase()
 
   let p2 = e.target.previousSibling.innerText
-let x = e.target
- let t = document.getElementsByClassName(p1)[0].nextSibling
- t.value = p2
- x.value =e.target.value.toUpperCase()
+  let x = e.target
+  let t = document.getElementsByClassName(p1)[0].nextSibling
+  t.value = p2
+  x.value =e.target.value.toUpperCase()
 }
 
 

@@ -184,7 +184,7 @@ const Rotors ={
 		10
 	]
 ,
-	 reflector : [
+	 reflector : [//this is reflector B in paper model
 			24,
 			17,
 			20,//2

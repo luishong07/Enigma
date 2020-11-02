@@ -73,7 +73,14 @@ class OutputBoard extends Component{
             <div align="center" className="board" >
                 <div className="box">
                     <label>PlainText:</label>
-                    <textarea className="area" rows="1" type="text" id="plaintext" onKeyPress={(e)=>{this.props.glow(e);this.props.clock(e)}} value={this.state.plain} onChange={(e)=>this.onChange(e)} onKeyUp={this.props.dim}/>
+                    <textarea className="area" 
+                            rows="1" type="text" 
+                            id="plaintext" 
+                            onKeyPress={(e)=>{this.props.glow(e);this.props.clock(e)}} 
+                            value={this.state.plain} onChange={(e)=>this.onChange(e)} 
+                            onKeyUp={this.props.dim}
+
+                    />
                 </div>
                 <div className="box">
 
@@ -86,12 +93,6 @@ class OutputBoard extends Component{
                     <button className="button"    >Clear</button>
 
                 </div>
-                {/* <div className="box">
-                    <label>Test:</label>
-                    <textarea onKeyPress={(e)=>{this.props.test(e)}} className="area" rows="1" /> 
-                </div> */}
-
-                    
             </div>
         )
     }

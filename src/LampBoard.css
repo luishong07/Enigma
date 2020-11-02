@@ -48,7 +48,8 @@
     line-height: 55px;
   }
 
+  
   /* .letter{width:40px;} */
 
-  /* .key:hover, .key.hover{box-shadow:0px 0px 100px rgb(251, 255, 0); opacity:1;    background-color:rgb(251, 255, 0);
-  } */
+  .key.hover{box-shadow:0px 0px 100px rgb(251, 255, 0); opacity:1;background-color:rgb(251, 255, 0);
+  }
