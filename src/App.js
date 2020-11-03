@@ -30,24 +30,40 @@ class App extends Component{
   }//end of state
 
 
-
+  // test = ()=>{
+  //   return "a"
+  // }
   
 
   glow = (e) =>{
     if(this.state.alphabet.includes(e.key.toUpperCase()) ){
-   
-    let test = document.getElementById(e.key.toUpperCase())
-    test.setAttribute("class", "key letter hover");
+      let newLetter 
+      console.log(newLetter)
+      let test = document.getElementById(e.key.toUpperCase())
+      test.setAttribute("class", "key letter hover");
     
+    }
+    else{
+      console.log("not a letter")
+      return
     }
   }
 
   dim = (e) => {
-   
-    let test = document.getElementById(e.key.toUpperCase())
-    test.setAttribute("class", "key letter")
+    if(this.state.alphabet.includes(e.key.toUpperCase())){
+      let test = document.getElementById(e.key.toUpperCase())
+      test.setAttribute("class", "key letter")
+      // console.log(e.key)
+    }
+    else{
+      console.log("not a letter")
+      return
+    }
+    
 
   }
+
+  
 
   
 
@@ -324,7 +340,7 @@ class App extends Component{
   })
 
    
-  }
+}
  
 plug =(e) =>{
   let p1 = e.target.value.toUpperCase()
