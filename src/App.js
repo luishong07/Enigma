@@ -26,7 +26,8 @@ class App extends Component{
     alphabet:["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
     pressedLetter:"",
     cipher:"",
-    emergency:''
+    emergency:'',
+    finalLetter:''
   }//end of state
 
 
@@ -35,11 +36,13 @@ class App extends Component{
   // }
   
 
-  glow = (e) =>{
+  glow =  async (e) =>{
     if(this.state.alphabet.includes(e.key.toUpperCase()) ){
-      let newLetter 
-      console.log(newLetter)
-      let test = document.getElementById(e.key.toUpperCase())
+      let newLetter = await this.clock(e)
+      this.setState({
+        finalLetter:newLetter
+      })
+      let test = document.getElementById(newLetter)
       test.setAttribute("class", "key letter hover");
     
     }
@@ -49,11 +52,12 @@ class App extends Component{
     }
   }
 
-  dim = (e) => {
+  dim =  (e) => {
     if(this.state.alphabet.includes(e.key.toUpperCase())){
-      let test = document.getElementById(e.key.toUpperCase())
+      let letterToTurnOff = this.state.finalLetter
+      let test = document.getElementById(letterToTurnOff)
       test.setAttribute("class", "key letter")
-      // console.log(e.key)
+      // console.log(this.state.finalLetter,"YOHOOHOHOH")
     }
     else{
       console.log("not a letter")
@@ -339,7 +343,7 @@ class App extends Component{
     cipher:this.state.cipher+letter_out
   })
 
-   
+   return letter_out
 }
  
 plug =(e) =>{

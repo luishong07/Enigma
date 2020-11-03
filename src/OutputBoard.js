@@ -77,8 +77,8 @@ class OutputBoard extends Component{
                             rows="1" type="text" 
                             id="plaintext" 
                             onKeyPress={(e)=>{
-                                this.props.glow(e);
-                                this.props.clock(e)}
+                                this.props.glow(e)}
+                                // this.props.clock(e)}
                                 } 
                             value={this.state.plain} 
                             onChange={(e)=>this.onChange(e)} 
