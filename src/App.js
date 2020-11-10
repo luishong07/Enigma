@@ -7,8 +7,6 @@ import PlugBoard from './PlugBoard'
 import SettingsBoard from './SettingsBoard'
 import OutputBoard from './OutputBoard'
 import {Rotors} from './Rotors'
-
-
 import MessageBoard from './MessageBoard';
 
 
@@ -86,7 +84,7 @@ class App extends Component{
 
   }
 
-  antiSeconds = async () => {
+  antiSeconds = async () => {//idea... set counter to 26 and start substracting with each keypress
     console.log("antiseconds")
     
   }
