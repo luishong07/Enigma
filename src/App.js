@@ -80,12 +80,18 @@ class App extends Component{
     })
       if(this.state.r>25){await this.setState({r:0})}
 
-    console.log(this.state.r+1,"seconds")
+    console.log(this.state.r,"seconds")
 
   }
 
   antiSeconds = async () => {//idea... set counter to 26 and start substracting with each keypress
-    console.log("antiseconds")
+
+    await this.setState({
+      r:this.state.r-1
+    })
+    if(this.state.r<0){await this.setState({r:25})}
+    
+    console.log(this.state.r,"antiseconds")
     
   }
 
@@ -356,7 +362,7 @@ plug =(e) =>{
 
 
   render(){
-        // console.log(this.state.l,this.state.m, this.state.r)
+        console.log(this.state.l,this.state.m, this.state.r)
 
     return(
       <div  >

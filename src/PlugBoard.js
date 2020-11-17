@@ -9,7 +9,7 @@ class PlugBoard extends Component{
         let plugs = document.getElementsByTagName("input")
         // console.log(plugs)
         let arr_plugs = [...plugs]
-        let self_plugs =  arr_plugs.map(p =>   {
+        arr_plugs.forEach(p =>   {
             if(p.value===""){
             p.value = p.previousElementSibling.innerHTML
             }
