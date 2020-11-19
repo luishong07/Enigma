@@ -84,27 +84,30 @@ class App extends Component{
 
   }
 
-  antiSeconds = async () => {//idea... set counter to 26 and start substracting with each keypress
-
+  antiSeconds = async () => {//idea... set counter to 26 and start substracting with each keypress... this does not work
     await this.setState({
       r:this.state.r-1
     })
     if(this.state.r<0){await this.setState({r:25})}
-    
     console.log(this.state.r,"antiseconds")
-    
   }
 
   minutes = async ()=>{
      await this.setState({
       m:this.state.m+1
     })
-        if(this.state.m>25){ await this.setState({m:0})}
+    if(this.state.m>25){ await this.setState({m:0})}
+    console.log('minutes')
 
   }
 
   antiMinutes = async () => {
-    console.log('antiminutes')
+    await this.setState({
+      m:this.state.m-1
+    })
+    if(this.state.m<0){await this.setState({m:25})}
+    console.log(this.state.m,'antiminutes')
+
   }
 
   hours = async () =>{
@@ -116,7 +119,11 @@ class App extends Component{
   }
 
   antiHours = async () => {
-    console.log("antihours")
+    await this.setState({
+      l:this.state.l-1
+    })
+    if(this.state.l<0){await this.setState({l:25})}
+    console.log(this.state.l,"antihours")
   }
 
 
