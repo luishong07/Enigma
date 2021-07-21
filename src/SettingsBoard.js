@@ -12,7 +12,7 @@ class SettingsBoard extends Component{
         console.log(p1,p2,p3)
         if(p1===p2||p2===p3||p3===p1){
             console.log("YOWZHAA")
-           alert("YOWZHAA, Can't have repeated rotors")
+           alert("Can't have repeated rotors")
         }
         
 

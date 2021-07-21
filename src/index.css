@@ -5,8 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url('https://cdn.pixabay.com/photo/2016/01/19/01/16/rotor-cipher-machine-1147801_960_720.jpg'), linear-gradient(rgba(255,255,255,0.5); */
-  background-image: linear-gradient(rgba(255, 255, 255, 0.178), rgba(255, 255, 255, 0.239)), url("https://cdn.pixabay.com/photo/2016/01/19/01/16/rotor-cipher-machine-1147801_960_720.jpg");
+  /* background-image: url('https://cdn.pixabay.com/photo/2016/01/19/01/16/rotor-cipher-machine-1147801_960_720.jpg'), linear-gradient(rgba(255,255,255,0.5)); */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.178), rgba(255, 255, 255, 0.239)), url("enigma-hero.jpeg");
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0.178), rgba(255, 255, 255, 0.239)), url("https://cdn.pixabay.com/photo/2016/01/19/01/16/rotor-cipher-machine-1147801_960_720.jpg"); */
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;

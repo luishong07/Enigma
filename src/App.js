@@ -19,7 +19,8 @@ class App extends Component{
   state={
     r:0,//angular position of right rotor...
     m:0,//angular position of middle rotor
-    l:0,//angular position of left rotor
+    l:0,//angular position of left rotor 
+    
     test:[],
     alphabet:["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
     pressedLetter:"",
